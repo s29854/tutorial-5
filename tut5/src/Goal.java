@@ -18,8 +18,8 @@ public class Goal {
         return bonus;
     }
 
-    public Goal(LocalDate dateOfAchieveing, String subject, int bonus) {
-        this.dateOfAchieveing = dateOfAchieveing;
+    public Goal(int year, int month, int day, String subject, int bonus) {
+        this.dateOfAchieveing = LocalDate.of(year, month, day);
         this.subject = this.subject;
         this.bonus = bonus;
     }

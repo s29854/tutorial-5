@@ -17,6 +17,8 @@ public class Main {
         Technology t3 = new Technology("Python", 1200);
         Technology t4 = new Technology("AI", 5000);
         dev1.addTechnology(t1);
+
+        System.out.println("Pensja dewelopera: "+dev1.calculateSalary()+" USD");
         //dev1.addTechnology(t4);
 
         /*Developer dev2 = new Developer("Andrzej", "Kowalski", "Bydgoszcz",
@@ -36,17 +38,19 @@ public class Main {
                 "zj@komputerex.pl", "007820039", 2022);
         tester1.addTestType("UI/UX");
         employees.add(tester1);
+        System.out.println("Pensja testera: "+tester1.calculateSalary() +" USD");
 
         Manager manager = new Manager("Leon", "Piela", "Warszawa",
                 "lp@komputerex.pl", "033714091", 2024);
-        Goal goal1 = new Goal(LocalDate.of(2024, 4, 30),"Implementing login", 1000);
+        Goal goal1 = new Goal(2024, 4, 30, "Implementing login", 1000);
         manager.addGoal(goal1);
         employees.add(manager);
+        System.out.println("Pensja managera: "+manager.calculateSalary() +" USD");
 
         double totalAmount = 0;
         for (Employee employee : employees){
             totalAmount += employee.calculateSalary();
         }
-        System.out.println(totalAmount);
+        System.out.println("Pensja wszystkich pracowników: "+totalAmount+" USD");
     }
 }

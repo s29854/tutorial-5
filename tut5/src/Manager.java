@@ -16,9 +16,9 @@ public class Manager extends Employee{
     @Override
     public double calculateSalary() {
         double salary = super.calculateSalary();
-        LocalDate currentMonth = LocalDate.now().withMonth(1);
+        LocalDate currentMonth = LocalDate.now().withDayOfMonth(1);
         for (Goal goal : goals){
-            if (goal.getDateOfAchieveing().withMonth(1).equals(currentMonth)){
+            if (goal.getDateOfAchieveing().withDayOfMonth(1).equals(currentMonth)){
                 salary+= goal.getBonus();
             }
         }
